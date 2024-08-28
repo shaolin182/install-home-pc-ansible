@@ -1,0 +1,8 @@
+services:
+  python-dev-container:
+    tty: true
+    build:
+      dockerfile: ./Dockerfile
+
+    volumes:
+      - ../../src/main:/app
