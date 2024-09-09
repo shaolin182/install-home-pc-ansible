@@ -11,3 +11,8 @@ Role structure can be created through this command
 ```shell
 ansible-galaxy role init <role-name>
 ```
+
+### Testing collections
+
+Use docker for building hosts
+https://ansible.readthedocs.io/projects/molecule/examples/docker/

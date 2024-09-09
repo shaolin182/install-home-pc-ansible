@@ -1,7 +1,15 @@
 - name: Verify
-  hosts: all
-  gather_facts: false
+  hosts: molecule
+  gather_facts: true
   tasks:
-    - name: Example assertion
+    - name : Get Netcat version
+      ansible.builtin.command: nc -h
+      register: nc_version
+
+    - name: Task is running from within the role
+      ansible.builtin.debug:
+        msg: "{{ nc_version }}"
+
+    - name: Check that nc version is ok
       ansible.builtin.assert:
-        that: true
+        that: "'v1.10-48' in nc_version.stderr"
