@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: molecule
+  gather_facts: true
+  tasks:
+    - name: Testing playbook install home PC
+      ansible.builtin.debug:
+        msg: "test"
+
+- import_playbook: ../../../playbooks/install-home-pc-playbook.yml

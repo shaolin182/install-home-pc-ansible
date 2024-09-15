@@ -5,7 +5,7 @@ A ansible playbook for installing my home PC
 
 ### Project structure
 
-Project structure follows those recommendations https://docs.ansible.com/ansible/latest/tips_tricks/sample_setup.html#alternative-directory-layout
+Project structure follows those recommendations https://docs.ansible.com/ansible/latest/dev_guide/developing_collections_structure.html
 
 Role structure can be created through this command
 ```shell

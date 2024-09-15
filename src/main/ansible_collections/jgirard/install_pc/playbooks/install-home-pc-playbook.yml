@@ -1,0 +1,9 @@
+---
+- name: Install Home PC
+  hosts: '{{ target | default("all") }}'
+  gather_facts: true
+  tasks:
+    - name: Install Dev Tools
+      ansible.builtin.include_role:
+        name: jgirard.install_pc.install_dev_tools
+        tasks_from: main.yml

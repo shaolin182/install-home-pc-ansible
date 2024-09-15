@@ -2,7 +2,7 @@
 # tasks file for install-pc
 - name: Task is running from within the role
   ansible.builtin.debug:
-    msg: "Install PC"
+    msg: "Install Dev Tools"
 
 - name: Install ncat package
   ansible.builtin.apt:
