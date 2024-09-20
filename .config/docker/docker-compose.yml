@@ -3,9 +3,12 @@ services:
     tty: true
     build:
       dockerfile: ./Dockerfile
+    privileged: true
+    network_mode: "host"
 
     volumes:
       - ../../src/main:/app
       # Share docker socket for starting container from container
       # It is not DIND, just a container that create a sibling container from host
       - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/vboxdrv:/dev/vboxdrv

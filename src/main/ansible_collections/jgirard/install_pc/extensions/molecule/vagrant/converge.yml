@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install Photo Tools
+      ansible.builtin.include_role:
+        name: jgirard.install_pc.install_photo_tools
+        tasks_from: main.yml

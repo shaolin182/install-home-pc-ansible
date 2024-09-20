@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+    type: virtualbox
+    options:
+      memory: 192
+      cpus: 2
+platforms:
+  - name: instance
+    box: ubuntu/jammy64
+    provider: virtualbox
+    interfaces:
+      - auto_config: true
+        network_name: private_network
+        type: static
+        ip: 192.168.56.1
